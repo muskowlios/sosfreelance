@@ -18,7 +18,15 @@ export class ViewMediaPage implements OnInit {
   {id: "0d967c82-73cf-4687-a7ec-5601891ade94", first_name: "Daisha", last_name: "Witting", image: "https://cdn.iconscout.com/icon/premium/png-256-thumb/avatar-212-164060.png"}]
   constructor() { }
 
+  showImageModal:boolean = false;
+  currentImgSrc;
+
   ngOnInit() {
+  }
+
+  onShowImageModal(src){
+    this.showImageModal=!this.showImageModal;
+    this.currentImgSrc = src;
   }
 
 }

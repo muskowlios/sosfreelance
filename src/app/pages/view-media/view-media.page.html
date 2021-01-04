@@ -14,9 +14,9 @@
     <ion-label>Photos</ion-label>
   </div>
   <div scrollX="true" class="img">
-    <ion-list class="scrollX" *ngFor="let item of [0,0,0,0,0,0,0]" scrollX="true">
+    <ion-list class="scrollX" *ngFor="let item of [0,0,0,0,0,0,0];index as i" scrollX="true">
       <!-- <ion-item> -->
-        <ion-thumbnail>
+        <ion-thumbnail (click)="onShowImageModal(i)">
           <img src="../../../assets/icons/macclary.jpg">
         </ion-thumbnail>
       <!-- </ion-item> -->
@@ -29,9 +29,9 @@
     <ion-label>videos</ion-label>
   </div>
   <div scrollX="true" class="img">
-    <ion-list class="scrollX" *ngFor="let item of [0,0,0,0,0,0,0]" scrollX="true">
+    <ion-list class="scrollX" *ngFor="let item of [0,0,0,0,0,0,0]; index as i" scrollX="true">
       <!-- <ion-item> -->
-        <ion-thumbnail>
+        <ion-thumbnail (click)="onShowImageModal(i)">
           <img src="../../../assets/icons/macclary.jpg">
         </ion-thumbnail>
       <!-- </ion-item> -->
@@ -59,3 +59,13 @@
   </ion-list>
 </div>
 </ion-content>
+
+
+<!-- Full image modal -->
+
+<div class="image_modal" *ngIf="showImageModal" (click)="onShowImageModal()">
+  <div class="container">
+    <img src="../../../assets/icons/macclary.jpg" alt="">
+    {{currentImgSrc}}
+  </div>
+</div>
