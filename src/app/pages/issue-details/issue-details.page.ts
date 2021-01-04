@@ -21,6 +21,8 @@ export class IssueDetailsPage implements OnInit {
   map: any;
   address: string;
 
+  issueDetailsCardBody:boolean = false
+
   latitude: number;
   longitude: number;
   dataReturned: any;
@@ -156,5 +158,9 @@ export class IssueDetailsPage implements OnInit {
       this.modalCtrl.dismiss();
     });
    } );
+  }
+
+  onShowIssueDetail(){
+    this.issueDetailsCardBody = !this.issueDetailsCardBody;
   }
 }

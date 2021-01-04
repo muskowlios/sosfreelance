@@ -20,9 +20,8 @@ ion-item-divider {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin-bottom: 20px;
+		margin-bottom: 40px;
 		.home_btn {
-			width: auto;
 			display: grid;
 			justify-content: center;
 			text-align: center;
@@ -53,6 +52,11 @@ ion-item-divider {
 			color: #fff;
 		}
 	}
+}
+
+ion-header.top_header {
+    height: 100px;
+    background: transparent;
 }
 
 ion-header {
@@ -119,9 +123,10 @@ ion-content {
 }
 
 app-slide-drawer.bottom_list_swapper {
-  background: rgba(0, 0, 0, .15);
+	background: rgba(0, 0, 0, .15);
 	.user_list {
-		padding: 0 20px;
+		padding: 50px 20px;
+		background: transparent;
 	
 		.list_item {
 			padding: 0 !important;

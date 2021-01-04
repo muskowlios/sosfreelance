@@ -5,8 +5,9 @@
   top: calc(100vh - 144px);
   z-index: 9999;
   ion-header {
+    height: 30px;
+    background: transparent;
     ion-toolbar {
-      height: 30px;
       border-top-right-radius: 8px;
       border-top-left-radius: 8px;
       ion-icon {

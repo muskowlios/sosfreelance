@@ -26,51 +26,55 @@
       <div class="list_title">
         <ion-label>Created by you</ion-label>
       </div>
-      <ion-item-sliding  *ngFor="let item of [0,0,0,0]">
-        <ion-item (click)="goToDetail()" style="--border-style:none;padding: 0;margin-bottom: 10px;">
-          <ion-thumbnail slot="start">
-            <img class="thumbnail_img" src="assets/icons/macclary.jpg">
-          </ion-thumbnail>
-          <ion-label>
-            <h1>Cladia John</h1>
-            <p>Question 1</p>
-          </ion-label> 
-          <p>4.5 K <ion-icon name="star" color="secondary" slot="end"></ion-icon> </p>
-          <ion-thumbnail slot="end">
-            <img class="card_thumbnail_icon" src="assets/icons/doctor icon.jpg">
-          </ion-thumbnail>        
-        </ion-item>
-        <ion-item-options side="end">
-          <ion-item-option (click)="unread()">
-            <ion-icon size="small" name="person-circle-outline" slot="top"></ion-icon>
-              <ion-label></ion-label>
-        </ion-item-option>
-        </ion-item-options>
-      </ion-item-sliding> 
+      <div class="scroll_y_list">
+        <ion-item-sliding  *ngFor="let item of [0,0,0,0,0,0,0,0]">
+          <ion-item (click)="goToDetail()" style="--border-style:none;padding: 0;margin-bottom: 10px;">
+            <ion-thumbnail slot="start">
+              <img class="thumbnail_img" src="assets/icons/macclary.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h1>Cladia John</h1>
+              <p>Question 1</p>
+            </ion-label> 
+            <p>4.5 K <ion-icon name="star" color="secondary" slot="end"></ion-icon> </p>
+            <ion-thumbnail slot="end">
+              <img class="card_thumbnail_icon" src="assets/icons/doctor icon.jpg">
+            </ion-thumbnail>        
+          </ion-item>
+          <ion-item-options side="end">
+            <ion-item-option (click)="unread()">
+              <ion-icon size="small" name="person-circle-outline" slot="top"></ion-icon>
+                <ion-label></ion-label>
+          </ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding> 
+      </div>
       <div class="list_title">
         <ion-label>Applied by you</ion-label>
       </div>
-      <ion-item-sliding  *ngFor="let item of [0,0,0,0]">
-        <ion-item (click)="goToDetail()" style="--border-style:none;padding: 0;margin-bottom: 10px;">
-          <ion-thumbnail slot="start">
-            <img class="thumbnail_img" src="assets/icons/macclary.jpg">
-          </ion-thumbnail>
-          <ion-label>
-            <h1>Cladia John</h1>
-            <p>Question 1</p>
-          </ion-label> 
-          <p>4.5 K <ion-icon name="star" color="secondary" slot="end"></ion-icon> </p>
-          <ion-thumbnail slot="end">
-            <img class="card_thumbnail_icon" src="assets/icons/doctor icon.jpg">
-          </ion-thumbnail>        
-        </ion-item>
-        <ion-item-options side="end">
-          <ion-item-option (click)="unread()">
-            <ion-icon size="small" name="person-circle-outline" slot="top"></ion-icon>
-              <ion-label></ion-label>
-        </ion-item-option>
-        </ion-item-options>
-      </ion-item-sliding> 
+      <div class="scroll_y_list">
+        <ion-item-sliding  *ngFor="let item of [0,0,0,0,0,0,0]">
+          <ion-item (click)="goToDetail()" style="--border-style:none;padding: 0;margin-bottom: 10px;">
+            <ion-thumbnail slot="start">
+              <img class="thumbnail_img" src="assets/icons/macclary.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h1>Cladia John</h1>
+              <p>Question 1</p>
+            </ion-label> 
+            <p>4.5 K <ion-icon name="star" color="secondary" slot="end"></ion-icon> </p>
+            <ion-thumbnail slot="end">
+              <img class="card_thumbnail_icon" src="assets/icons/doctor icon.jpg">
+            </ion-thumbnail>        
+          </ion-item>
+          <ion-item-options side="end">
+            <ion-item-option (click)="unread()">
+              <ion-icon size="small" name="person-circle-outline" slot="top"></ion-icon>
+                <ion-label></ion-label>
+          </ion-item-option>
+          </ion-item-options>
+        </ion-item-sliding> 
+      </div>
       
     </ion-list>
   </div>    

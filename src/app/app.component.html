@@ -15,7 +15,9 @@
                   <div class="name">21.3 K</div>
                 </div>
                 <div class="menu_bar_btn">
-                  <ion-icon name="menu-outline"></ion-icon>
+                  <ion-buttons slot="start" color="primary">
+                    <ion-menu-button></ion-menu-button>
+                  </ion-buttons>
                 </div>
               </div>
             </div>
@@ -30,7 +32,7 @@
             <li [routerLink]="[menu_item.url]" routerLinkActive="active" dex(click)="selectedIn = i" routerDirection="root" lines="none" detail="false" [class.selected]="selectedIndex == i">{{menu_item?.title}}</li>
           </ng-container> -->
             <ng-container *ngFor="let menu_item of appPages; let i = index">
-              <li [routerLink]="[menu_item.url]">{{menu_item?.title}}</li>
+              <li [routerLink]="[menu_item.url]" routerLinkActive="active">{{menu_item?.title}}</li>
             </ng-container>
             <li (click)="logOut()">LogOut</li>
           </ul>

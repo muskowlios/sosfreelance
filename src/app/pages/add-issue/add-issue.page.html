@@ -16,10 +16,10 @@
   </ion-item>  
   <ion-card class="stories-card" scrollX="true">
     <ion-list class="story-list scrollX" *ngFor="let story of stories">
-      <ion-item class="story-item">
+      <ion-item class="story-item" (click)="onSelected()">
         <ion-avatar class="story-avatar" [ngClass]="{'seen': false}">
           <img [src]="story.image">
-          <ion-badge class="notifications-badge" color="primary">
+          <ion-badge class="notifications-badge" color="primary" *ngIf="selected">
             <ion-icon name="checkmark"></ion-icon>
           </ion-badge>
         </ion-avatar>
@@ -49,16 +49,23 @@
     <ion-icon slot="start" name="camera"></ion-icon>
     <ion-label>ADD PHOTOS/VIDEOS</ion-label>
   </ion-item>  
+
+  <div class="img-fluid">
+    <img src="assets/icons/dummy.png">
+  </div>
   <ion-card class="stories-card" scrollX="true">
     <ion-list class="story-list">
       <ion-item class="story-item">
-        <ion-thumbnail>
-          <img src="assets/icons/camera.png">
-        </ion-thumbnail>
+        <ion-thumbnail class="image-upload">
+          <label for=image>
+            <img src="assets/icons/camera.png">
+          </label>
+          <input type="file" name="image" id="image">
+        </ion-thumbnail>        
       </ion-item>  
     </ion-list>
-    <ion-list class="story-list scrollX" *ngFor="let story of stories" >
-      <ion-item class="story-item" >
+    <ion-list class="story-list scrollX" *ngFor="let story of stories;index as i" >
+      <ion-item class="story-item" (click)="onViewFullImage(i)">
         <ion-thumbnail>
           <img src="assets/icons/dummy.png">
         </ion-thumbnail>

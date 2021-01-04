@@ -1,3 +1,19 @@
+ion-header {
+    height: 50px;
+    background: #fff;
+}
+.img-fluid {
+    width: 100%;
+    height: 200px;
+    padding: 20px;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+.image-upload>input {
+    display: none;
+  }
 .stories-card {
     margin: 0px;
     margin-top: var(--ion-margin, 16px);

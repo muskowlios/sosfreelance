@@ -16,9 +16,22 @@ export class AddIssuePage implements OnInit {
   {id: "40784179-4d2a-4b6c-8f4f-98f29727e03d", first_name: "Cathrine", last_name: "Pollich", image: "https://cdn.iconscout.com/icon/premium/png-256-thumb/avatar-212-164060.png"},
   {id: "612a8527-1d4d-4308-bbbc-d0f34dfef4a7", first_name: "Dewayne", last_name: "Blanda", image: "https://cdn.iconscout.com/icon/premium/png-256-thumb/avatar-212-164060.png"},
   {id: "0d967c82-73cf-4687-a7ec-5601891ade94", first_name: "Daisha", last_name: "Witting", image: "https://cdn.iconscout.com/icon/premium/png-256-thumb/avatar-212-164060.png"}]
+  
+  selected:boolean = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSelected(){
+    this.selected = !this.selected;
+  }
+
+  currentImageView;
+  onViewFullImage(i, src){
+    alert(i)
+    this.currentImageView = src;
   }
 
 }

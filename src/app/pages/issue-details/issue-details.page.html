@@ -25,18 +25,35 @@
 
 <div class="app_footer">
   <div class="detail_card">
-    <div class="header">
+    <div class="header" (click)="onShowIssueDetail()">
       <h4>Issue Details</h4>
       <ion-icon name="chevron-down-outline"></ion-icon>
     </div>
-    <div class="detail_card_body">
+    <div class="detail_card_body" *ngIf="issueDetailsCardBody">
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
     </div>
   </div>
   <div class="footer_menu">
     <div scrollX="true">
       <ion-list class="scrollX" *ngFor="let item of [0,0,0,0]" scrollX="true">
-        <div class="menu_item">
+        <div class="menu_item"  (click)="feedback()">
           <ion-icon name="close-circle-outline"></ion-icon>
           <ion-label>Close</ion-label>
         </div>
@@ -94,3 +111,29 @@
     </div> 
 
 </app-slide-drawer> -->
+
+<!-- Model -->
+
+<!-- <ion-list lines="none" style="border-radius: 30px;">
+  <ion-list-header lines="inset" style="--border-style:none">
+    <ion-label style="display: flex;width: 100%;">
+      <h2 style="width: 85%;">Issue Details</h2>
+      <ion-icon slot="end" name="chevron-down-outline"></ion-icon>
+    </ion-label>
+  </ion-list-header>
+  <ion-item style="--border-style:none">
+    <ion-label>
+      <p class="ion-text-wrap">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    </ion-label>
+  </ion-item> 
+</ion-list>
+  <div> -->
+
+    <!-- <div scrollX="true" style="padding: 0 20px;">
+      <ion-list style="background: transparent;" class="scrollX" *ngFor="let item of [0,0,0,0,0,0,0]" scrollX="true">
+          <div style="display: grid;padding: 10px;" (click)="feedback()">
+            <ion-icon style="font-size: -webkit-xxx-large;" name="close-circle-outline"></ion-icon>
+            <ion-label style="font-size: 10px;text-align: center;">Close</ion-label>
+          </div>
+      </ion-list>
+    </div>  -->

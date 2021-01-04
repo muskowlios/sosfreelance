@@ -1,12 +1,13 @@
 div{
     overflow: auto;
+    width: 100%;
     .content{
         width: 100%;
         padding: 10px;
         text-align: center;
         overflow: auto;
-        border-radius: 20px;
-        background: pink !important;
+        border-radius: 10px;
+        background: #fff !important;
 
         h5{
             display: flex !important;

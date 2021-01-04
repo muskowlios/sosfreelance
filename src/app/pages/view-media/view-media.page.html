@@ -9,8 +9,10 @@
 
 <ion-content>
 <div>
-  <ion-icon size="medium" name="camera" color="secondary"></ion-icon>
-  <ion-label>Photos</ion-label>
+  <div class="header_title">
+    <ion-icon size="medium" name="camera"></ion-icon>
+    <ion-label>Photos</ion-label>
+  </div>
   <div scrollX="true" class="img">
     <ion-list class="scrollX" *ngFor="let item of [0,0,0,0,0,0,0]" scrollX="true">
       <!-- <ion-item> -->
@@ -22,8 +24,10 @@
   </div>
 </div>
 <div>
-  <ion-icon size="medium" name="videocam" color="secondary"></ion-icon>
-  <ion-label>videos</ion-label>
+  <div class="header_title">
+    <ion-icon size="medium" name="videocam"></ion-icon>
+    <ion-label>videos</ion-label>
+  </div>
   <div scrollX="true" class="img">
     <ion-list class="scrollX" *ngFor="let item of [0,0,0,0,0,0,0]" scrollX="true">
       <!-- <ion-item> -->
@@ -35,8 +39,10 @@
   </div>
 </div>
 <div>
-  <ion-icon size="medium" color="secondary" name="list"></ion-icon>
-  <ion-label>Other documents</ion-label>
+  <div class="header_title">
+    <ion-icon size="medium" name="list"></ion-icon>
+    <ion-label>Other documents</ion-label>
+  </div>
   <ion-list>
     <ion-item>
       <ion-label class="document">example pdf</ion-label>
