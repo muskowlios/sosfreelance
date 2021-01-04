@@ -1,27 +1,40 @@
 <ion-app>
   <ion-split-pane contentId="main-content">
-    <ion-menu contentId="main-content" type="overlay">
-      <ion-content>
-        <ion-list id="inbox-list">
-          <ion-list-header>Inbox</ion-list-header>
-          <ion-note>hi@ionicframework.com</ion-note>
-
-          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
-            <ion-item (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
-              <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
-              <ion-label>{{ p.title }}</ion-label>
-            </ion-item>
-          </ion-menu-toggle>
-        </ion-list>
-
-        <ion-list id="labels-list">
-          <ion-list-header>Labels</ion-list-header>
-
-          <ion-item *ngFor="let label of labels" lines="none">
-            <ion-icon slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
-            <ion-label>{{ label }}</ion-label>
-          </ion-item>
-        </ion-list>
+    <ion-menu contentId="main-content" type="overlay" class="my-custom-menu">
+      <ion-content class="sideBar_menu">
+        <div class="side_bar_profile_header">
+          <div>
+            <div class="user_card">
+              <div class="avtar_img">
+                <img src="../assets/icons/macclary.jpg" alt="">
+              </div>
+              <div class="user_info">
+                <div class="info_details">
+                  <div class="name">CLaudia</div>
+                  <div class="city">Newyork</div>
+                  <div class="name">21.3 K</div>
+                </div>
+                <div class="menu_bar_btn">
+                  <ion-icon name="menu-outline"></ion-icon>
+                </div>
+              </div>
+            </div>
+            <div class="screnn_title">
+              <h1>Profile</h1>
+            </div>
+          </div>
+        </div>
+        <div class="menu">
+          <ul>
+            <!-- <ng-container *ngFor="let menu_item of appPages; let i = index">
+            <li [routerLink]="[menu_item.url]" routerLinkActive="active" dex(click)="selectedIn = i" routerDirection="root" lines="none" detail="false" [class.selected]="selectedIndex == i">{{menu_item?.title}}</li>
+          </ng-container> -->
+            <ng-container *ngFor="let menu_item of appPages; let i = index">
+              <li [routerLink]="[menu_item.url]">{{menu_item?.title}}</li>
+            </ng-container>
+            <li (click)="logOut()">LogOut</li>
+          </ul>
+        </div>
       </ion-content>
     </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>

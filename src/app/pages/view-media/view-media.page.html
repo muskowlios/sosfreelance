@@ -1,0 +1,55 @@
+<ion-header translucent class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>
+      <ion-icon name="arrow-back-outline"></ion-icon>
+      View Media
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div>
+  <ion-icon size="medium" name="camera" color="secondary"></ion-icon>
+  <ion-label>Photos</ion-label>
+  <div scrollX="true" class="img">
+    <ion-list class="scrollX" *ngFor="let item of [0,0,0,0,0,0,0]" scrollX="true">
+      <!-- <ion-item> -->
+        <ion-thumbnail>
+          <img src="../../../assets/icons/macclary.jpg">
+        </ion-thumbnail>
+      <!-- </ion-item> -->
+    </ion-list>
+  </div>
+</div>
+<div>
+  <ion-icon size="medium" name="videocam" color="secondary"></ion-icon>
+  <ion-label>videos</ion-label>
+  <div scrollX="true" class="img">
+    <ion-list class="scrollX" *ngFor="let item of [0,0,0,0,0,0,0]" scrollX="true">
+      <!-- <ion-item> -->
+        <ion-thumbnail>
+          <img src="../../../assets/icons/macclary.jpg">
+        </ion-thumbnail>
+      <!-- </ion-item> -->
+    </ion-list>
+  </div>
+</div>
+<div>
+  <ion-icon size="medium" color="secondary" name="list"></ion-icon>
+  <ion-label>Other documents</ion-label>
+  <ion-list>
+    <ion-item>
+      <ion-label class="document">example pdf</ion-label>
+      <ion-label slot="end" class="type">pdf</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class="document">example doc</ion-label>
+      <ion-label slot="end" class="type">doc</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label class="document">example xps doc</ion-label>
+      <ion-label slot="end" class="type">xps doc</ion-label>
+    </ion-item>
+  </ion-list>
+</div>
+</ion-content>

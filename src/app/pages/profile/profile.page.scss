@@ -1,0 +1,40 @@
+.userDetailsList {
+    background-color: #38b6ff;
+    height: 100%;
+}
+ion-item{
+    --background: #38b6ff;
+}
+.margin{
+    margin-bottom: 10px;
+}
+
+.list_border{
+    --border-style:none;
+}
+
+.container-form-btn{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.form-btn{
+    color: white;
+    border: 1px solid white;
+    width: 80%;
+}
+.userHeader{
+    width: 80%;
+    float: right;
+    border-radius: 25px 0px 0px 25px;
+}
+h1 ,h3 , p,ion-item{
+    color: white !important;
+}
+
+ion-item{
+    --border-style:none;
+    .profile_details{
+        text-align: center;
+        text-transform: uppercase;
+    }
+}

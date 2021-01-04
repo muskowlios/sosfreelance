@@ -1,0 +1,66 @@
+<ion-header translucent class="ion-no-border">
+  <ion-toolbar class="top_header_navbar">
+    <ion-buttons slot="start">
+      <a href="javascript:history.back()" class="back_btn">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </a>
+    </ion-buttons>
+    <ion-title class="navbar_title">Events</ion-title>
+    <ion-buttons slot="end" (click)="addEvent()">
+      <ion-icon slot="start" name="add" color="primary"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+  <div class="top_header_scrolled_menu_list">
+    <div scrollX="true">
+      <ion-list class="scrollX" *ngFor="let item of [0,0,0,0]; index as i" scrollX="true">
+        <div class="menu_item" [ngClass]="{active: i==0}">
+          <img src="../../../assets/icons/verified-icon-png-5.jpg" alt="">
+          <span>Asked by you</span>
+        </div>
+      </ion-list>
+    </div>
+  </div>
+</ion-header>
+
+<!-- <ion-segment (ionChange)="segmentChanged($event)" [(ngModel)]="askaroundlist">
+  <ion-segment-button value="askedbyyou" layout="icon-start">
+    <ion-label>Asked by you</ion-label>
+    <ion-icon name="call"></ion-icon>
+  </ion-segment-button>
+  <div class="verticalLine"></div>
+  <ion-segment-button value="repliedbyyou" layout="icon-start">
+    <ion-label>Replied by you</ion-label>
+    <div class="icon">
+      <img src="../../../assets/icons/verified-icon-png-5.jpg" alt="">
+    </div>
+  </ion-segment-button>   
+</ion-segment> -->
+
+<ion-content>
+  <div class="app_body">
+    <ion-list class="detailList">
+      <ion-item-sliding *ngFor="let item of [0,0,0,0]">
+        <ion-item style="--border-style:none;padding: 0;margin-bottom: 10px;">
+          <ion-thumbnail slot="start">
+            <img class="thumbnail_img" src="assets/icons/macclary.jpg">
+          </ion-thumbnail>
+          <ion-label>
+            <h1>Cladia John</h1>
+            <p>Question 1</p>
+          </ion-label>
+          <p>4.5 K <ion-icon name="star" color="secondary" slot="end"></ion-icon>
+          </p>
+          <ion-thumbnail slot="end">
+            <img class="card_thumbnail_icon" src="assets/icons/doctor icon.jpg">
+          </ion-thumbnail>
+        </ion-item>
+        <ion-item-options side="end">
+          <ion-item-option (click)="unread()">
+            <ion-icon size="small" name="person-circle-outline" slot="top"></ion-icon>
+            <ion-label></ion-label>
+          </ion-item-option>
+        </ion-item-options>
+      </ion-item-sliding>
+    </ion-list>
+  </div>
+</ion-content>

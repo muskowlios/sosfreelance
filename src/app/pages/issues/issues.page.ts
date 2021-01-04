@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CompletedPage } from '../completed/completed.page';
-import { InProgressPage } from '../in-progress/in-progress.page';
-import { MyIssuesPage } from '../my-issues/my-issues.page';
-import { NewIssuesPage } from '../new-issues/new-issues.page';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-issues',
@@ -10,15 +7,25 @@ import { NewIssuesPage } from '../new-issues/new-issues.page';
   styleUrls: ['./issues.page.scss'],
 })
 export class IssuesPage implements OnInit {
+  issueslist : string = 'newIssues';
 
-  myIssues = MyIssuesPage
-  newIssues = NewIssuesPage
-  inProgress = InProgressPage
-  completed = CompletedPage
-
-  constructor() { }
+  constructor(private router :Router) { }
 
   ngOnInit() {
   }
 
+  segmentChanged(data: any){
+    this.issueslist = data.target.value;
+  }
+  addIssue(){
+    this.router.navigate(['/add-issue']);
+  }
+
+  unread(data){
+
+  }
+  goToDetail(){
+    this.router.navigate(['/issue-details']);
+
+  }
 }

@@ -1,0 +1,29 @@
+div{
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    overflow: auto;
+    background: white !important;
+
+    h5{
+        display: flex !important;
+        justify-content: center !important;
+
+        h6{
+            color: #3dc2ff !important;
+            margin: 0 10px !important;
+        }
+    }
+    ion-label{
+        font-size: 10px;
+        font-weight: 200;
+    }
+    ion-icon{
+        width: 100% ;
+        font-size: xxx-large;
+        margin: 10px 0;
+    }
+    ion-button{
+        text-transform: capitalize;
+    }
+}

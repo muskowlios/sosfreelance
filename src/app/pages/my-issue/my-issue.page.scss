@@ -1,0 +1,59 @@
+ion-title{
+    font-size: 16px;
+    font-weight: 500;
+    ion-icon{
+        margin-right: 10px;
+        align-items: center;
+    }
+}
+
+  .vertical-line {
+    width: 0.1px;
+    height: 90px;
+    background: #000;
+    margin: 0 25px;
+  }  
+
+ion-content{
+  .status{
+    padding: 0 10px 0 20px;margin-bottom: 10px;
+
+    .overview{
+      font-weight: 300;
+      font-size: 14px;
+    }
+  }
+  .day-issue{
+    display: flex;
+    ion-label{
+      margin: 0px 0 0 10px;
+      color: gray;
+      font-size: 14px;
+    }
+    .circle {
+      width: 20px;
+      height: 20px;
+    /*   background: #2ecc71; */
+      border-radius: 100px;
+      border:1px solid #000;
+      position: relative;
+      margin: 0px 15px 0;
+    }
+    ion-card{
+      margin: 15px 0;
+      width: 80%;
+      height: 1%;
+      border-radius: 20px;
+
+      h5{
+        color: black;
+        margin-bottom: 16px !important;
+        margin-left: 10px;
+
+        ion-icon{
+          margin: -10px 0;
+        }
+      }
+    }
+  }
+}  

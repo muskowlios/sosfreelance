@@ -1,0 +1,25 @@
+ion-content{
+  .app_body{
+    ion-list.detailList{
+      background: #EBE9EA !important;
+      margin-top: 10px;
+      width: 100%;
+      min-height: 100vh;
+      padding: 10px 5px;
+      
+    }
+  }
+}
+
+ion-item-option{
+  ion-label{
+    text-align: center;
+  }
+  ion-label::after {
+    text-align: center !important;
+    margin: 0 !important;
+    white-space:pre;
+    content:"View \a Profile";
+    font-size: 10px !important;
+  }
+}

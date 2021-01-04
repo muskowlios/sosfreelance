@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>    <ion-searchbar (ionInput)="searchLocation($event)" placeholder="Search Location..."></ion-searchbar></ion-title> 
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div #map id="map">
+  </div>
+</ion-content>
+<ion-footer class="ion-padding ion-text-center">
+  <ion-button (click)="onClick()" size="default">
+    Create
+  </ion-button>
+</ion-footer>

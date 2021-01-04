@@ -8,27 +8,34 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AuthGuard } from './services/Authentication/auth.guard';
 import { Geolocation } from '@ionic-native/geolocation/ngx';
 import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
-
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { SuperTabsModule } from '@ionic-super-tabs/angular';
+import { IonBottomDrawerModule } from 'ion-bottom-drawer';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ApiService } from './services/api/api.service';
+import { UserService } from './services/user/user.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [
-    BrowserModule,
+    BrowserModule, 
     IonicModule.forRoot(),
     AppRoutingModule,
-    SuperTabsModule.forRoot(),
-    FlexLayoutModule 
+    HttpClientModule
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    AuthGuard,  
     Geolocation,
     NativeGeocoder,
+    ReactiveFormsModule,
+    FormsModule,
+    IonBottomDrawerModule,
+    ApiService,UserService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

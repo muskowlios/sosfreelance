@@ -1,0 +1,35 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="custom-font">FAQ</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+
+  <ion-list>
+    <ion-searchbar type="text"  (ionChange)="getFaq($event)"  placeholder="Search ..."></ion-searchbar>
+
+    <div class="row" *ngIf="faqs">
+      <div class="col">
+        <div class="tabs">
+          <div class="tab" *ngFor="let faq of faqs">
+            <input type="radio" id="{{faq.id}}" name="rd">
+            <label class="tab-label" for="{{faq.id}}">{{faq.question}}</label>
+            <div class="tab-content">
+              {{faq.answer}}
+            </div>
+          </div>       
+        </div>
+      </div>
+    </div>
+  </ion-list>
+
+  <div *ngIf="!faqs">
+    <div class="ion-padding custom-skeleton">
+      <ion-skeleton-text animated></ion-skeleton-text>
+    </div>
+  </div>
+</ion-content>

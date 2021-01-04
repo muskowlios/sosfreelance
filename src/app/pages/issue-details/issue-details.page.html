@@ -1,0 +1,96 @@
+<div class="top_header_user_detail">
+  <ion-item class="user_card">
+    <ion-thumbnail slot="start">
+      <img class="thumbnail_img" src="assets/icons/macclary.jpg">
+    </ion-thumbnail>
+    <ion-label>
+      <h2>CLAUDIA JOHN</h2>
+      <p><b>ACCIDENT</b></p>
+    </ion-label>
+    <div>
+      <p class="py-0 my-0">4.5 K <ion-icon name="star" color="secondary" slot="end"></ion-icon>
+      </p>
+      <p class="py-0 my-0"><b>450 M</b></p>
+    </div>
+    <ion-thumbnail slot="end">
+      <img class="card_thumbnail_icon" src="assets/icons/doctor icon.jpg">
+    </ion-thumbnail>
+  </ion-item>
+</div>
+
+<ion-content>
+  <div #map id="map"></div>
+</ion-content>
+
+
+<div class="app_footer">
+  <div class="detail_card">
+    <div class="header">
+      <h4>Issue Details</h4>
+      <ion-icon name="chevron-down-outline"></ion-icon>
+    </div>
+    <div class="detail_card_body">
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    </div>
+  </div>
+  <div class="footer_menu">
+    <div scrollX="true">
+      <ion-list class="scrollX" *ngFor="let item of [0,0,0,0]" scrollX="true">
+        <div class="menu_item">
+          <ion-icon name="close-circle-outline"></ion-icon>
+          <ion-label>Close</ion-label>
+        </div>
+      </ion-list>
+    </div>
+  </div>
+</div>
+
+
+<!-- <app-slide-drawer>
+  <ion-list>
+    <ion-card lines="none">
+      <ion-card-header lines="inset">
+        <ion-label>
+          <h2>Event Details</h2>
+          <ion-icon slot="end" name="chevron-down-outline"></ion-icon>
+        </ion-label>
+      </ion-card-header>
+      <ion-item class="description">
+        <ion-label>
+          <p class="ion-text-wrap">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+        </ion-label>
+      </ion-item>
+    </ion-card>
+    <div scrollX="true">
+      <ion-list class="scrollX" *ngFor="let item of [0,0,0,0,0,0,0]" scrollX="true">
+        <div>
+          <ion-icon name="close-circle-outline"></ion-icon>
+          <ion-label>Close</ion-label>
+        </div>
+      </ion-list>
+    </div>
+  </ion-list>
+  <ion-list lines="none" style="border-radius: 30px;">
+    <ion-list-header lines="inset" style="--border-style:none">
+      <ion-label style="display: flex;width: 100%;">
+        <h2 style="width: 85%;">Issue Details</h2>
+        <ion-icon slot="end" name="chevron-down-outline"></ion-icon>
+      </ion-label>
+    </ion-list-header>
+    <ion-item style="--border-style:none">
+      <ion-label>
+        <p class="ion-text-wrap">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+      </ion-label>
+    </ion-item> 
+  </ion-list>
+    <div>
+  <div scrollX="true" style="padding: 0 20px;">
+      <ion-list style="background: transparent;" class="scrollX" *ngFor="let item of [0,0,0,0,0,0,0]" scrollX="true">
+          <div style="display: grid;padding: 10px;" (click)="feedback()">
+            <ion-icon style="font-size: -webkit-xxx-large;" name="close-circle-outline"></ion-icon>
+            <ion-label style="font-size: 10px;text-align: center;">Close</ion-label>
+          </div>
+      </ion-list>
+    </div> 
+
+</app-slide-drawer> -->

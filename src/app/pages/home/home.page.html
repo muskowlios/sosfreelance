@@ -1,0 +1,54 @@
+<!-- Header -->
+<ion-header class="ion-no-border">
+  <div class="serach_bar_header">
+    <!-- User avtar image -->
+    <ion-avatar slot="start">
+      <img src="../../../assets/icons/macclary.jpg">
+    </ion-avatar>
+    <!-- Ask around search input -->
+    <div class="search_input_bar">
+      <input type="search" placeholder="Ask around you..." [routerLink]="['/add-ask-around-you']">
+      <ion-icon name="search-outline"></ion-icon>
+    </div>
+  </div>
+</ion-header>
+
+<!-- Home App Body -->
+<ion-content>
+  <div #map id="map">
+  </div>
+</ion-content>
+
+<!-- Bottom to Up Swapper List -->
+<ion-item-divider>
+  <div class="home_footer_btns">
+    <button class="home_btn home_left_btn" (click)="getHelp()">GET</button>
+    <button class="home_btn home_center_btn" (click)="emergencyBtn()"></button>
+    <button class="home_btn home_right_btn" (click)="getHelp()">GIVE</button>
+  </div>
+</ion-item-divider>
+<app-slide-drawer class="bottom_list_swapper">
+  <div class="user_list">
+    <ng-container *ngFor="let item of [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]">
+      <div class="list_item">
+        <ion-thumbnail slot="start">
+          <img class="user_profile_img" src="../../../assets/icons/macclary.jpg">
+        </ion-thumbnail>
+        <div class="user_details">
+          <ion-label>
+            <h1>Cladia John</h1>
+            <p>Accident</p>
+          </ion-label>
+          <ion-label>
+            <h1>4.5 K <ion-icon color="secondary" name="star" slot="end"></ion-icon>
+            </h1>
+            <p>460 M</p>
+          </ion-label>
+          <ion-thumbnail slot="end">
+            <img class="card_thumbnail_icon" src="assets/icons/doctor icon.jpg">
+          </ion-thumbnail>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</app-slide-drawer>

@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -26,26 +26,263 @@
 @import "~@ionic/angular/css/flex-utils.css";
 
 
+
 :root{
-    --ion-color-primary: rgb(63, 177, 253);
+  --primary: #5EC2FE;
 }
 
-ion-header{
-    ion-toolbar{
-        ion-title{
-            display: flex !important;
-            align-items: center !important;
-            a{
-                color: var(--ion-text-color);
-                text-decoration: none;
-                .back_btn{
-                    padding-top: 5px;
-                    margin-right: 15px;
-                }
-            }
-            span{
-                padding-bottom: 5px;
-            }
-        }
-    }
+.py-0{
+  padding-top: 0;
+  padding-bottom: 0;
 }
+.my-0{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.header-background {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+a.back_btn{
+  text-decoration: none;
+  color: #222;
+  font-size: 20px;
+}
+ion-header{
+  height: 100px;
+  background: #fff;
+  ion-toolbar.top_header_navbar{
+    padding: 0 20px;
+    ion-title.navbar_title{
+      font-size: 15px;
+      font-weight: 400;
+    }
+  }
+
+  .top_header_scrolled_menu_list{
+    display: flex;
+    justify-content: center;
+    .menu_item{
+      padding: 5px 10px 0 10px;
+      margin: 2px 2px 0 2px;
+      display: flex;
+      align-items: center;
+      border-right: 1px solid #dee2e6 !important;
+      img{
+        margin-right: 5px;
+        width: 20px;
+      }
+    }
+    .menu_item.active{
+      border-right: 2px solid red;
+    }
+  }
+}
+
+
+.custom-font {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+ion-toolbar {
+  --background: transparent;
+
+  ion-title {
+    font-weight: 900;
+  }
+
+  p {
+    font-weight: 600;
+  }
+}
+// Horizontal container
+*[scrollX=true] {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+      display: none;
+  }
+
+  .scrollX {
+      flex: 0 0 auto;
+  }
+}
+ion-content {
+  // --background: rgba(237, 242, 245, 0);
+
+  .wrap-input {
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px 0px rgba(57, 71, 82, 0.12);
+  }
+
+  .input {
+    display: block;
+    width: 100%;
+    background: transparent;
+    font-family: Josefin Sans;
+    font-size: 16px;
+    line-height: 1.2;
+    border: none;
+    outline: none;
+    height: 46px;
+    padding: 0 20px 0 23px;
+  }
+
+  .container-form-btn {
+    display: flex;
+    justify-content: center;
+  }
+
+  .form-button {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 0 20px;
+    min-width: 100%;
+    height: 42px;
+    background-color: #ffffff;
+    font-size: 14px;
+    color: #000;
+    text-transform: uppercase;
+    transition: all 0.4s;
+    // box-shadow: 0 10px 30px 0px rgba(57, 71, 82, 0.5);
+    outline: none;
+    margin-top: 20px;
+  }
+
+  .form-btn {
+    border: 2px solid white;
+    background-color: #38b6ff !important;
+    color: #ffffff !important;
+    padding: 10px;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+
+
+  .form-btn:hover {
+    background-color: #38b6ff;
+    box-shadow: 0 10px 30px 0px rgba(57, 71, 82, 0.8);
+  }
+  .conditions {
+    font-size: 12px;
+    position: absolute;
+  }
+
+  // .userList {
+  //   background: #f5f7fa;
+  //   ion-item {
+  //     border-radius: 10px;
+  //     margin-bottom: 20px;    
+  //     box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+  //   }
+  // }
+
+  
+  // #background-content{
+  //   background: transparent !important;
+  // } 
+  
+
+  // ion-list{
+  //   ion-thumbnail{
+  //     .card_thumbnail_icon{
+  //       border-radius: 100%;
+  //       height: 80%;
+  //       width: 80%;
+  //       margin-top: 6px;
+  //     }
+  //   }
+  // }
+
+  ion-segment{
+    ion-segment-button{
+      ion-label, ion-icon{
+        font-size: 12px;
+      }
+    }
+  }
+
+  ion-list{
+    ion-item-sliding{
+      ion-item{
+        --border-style:none;
+        ion-thumbnail{
+          .card_thumbnail_icon{
+            border-radius: 100%;
+            height: 80%;
+            width: 80%;
+            margin-top: 6px;
+          }
+          // .thumbnail_img{
+          //   padding: 0 !important;
+          //   // margin-bottom: 0 !important;
+          //   height: 72px !important;
+          //   width: 60px !important;
+          // }
+        }
+        ion-label{
+          h1{
+            display: flex;
+            font-size: 16px !important;
+          }
+          b{
+            font-size: 10px !important;
+            // font-weight: 700;
+          }
+        }
+      }
+      ion-item-options{
+        ion-item-option{
+          border-radius: 0px;
+          padding: 0;
+          height: auto;
+          margin-bottom: 10px;
+
+          ion-label {
+            text-align: center !important;
+            margin: 0px 0 0 0 !important;
+            font-size: 10px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.label-stacked.sc-ion-label-md-h, .label-floating.sc-ion-label-md-h{
+  font-size: 25px;
+}
+
+// ion-content{
+//   --background: var(--ion-background-color, transparent);
+// }
+
+ion-modal{
+  background: transparent !important;
+  ion-backdrop{
+    background: transparent !important;
+  }
+  div{
+    background: transparent !important;
+  }
+}
+
+.cancel-modal {
+  .modal-wrapper {
+      display: block;
+      width: 67%;
+      height: 35%;
+  }
+}
+
+main.inner-scroll.scroll-y{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+

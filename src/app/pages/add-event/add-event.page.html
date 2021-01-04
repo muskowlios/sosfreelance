@@ -1,0 +1,77 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="custom-font">Create New Event</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+    <ion-list lines="none">
+      <ion-item>
+        <ion-icon slot="end" name="calendar"></ion-icon>
+        <ion-label position="stacked">Event title</ion-label>
+        <ion-input type="text" placeholder="Eg. accident"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="end" name="calendar"></ion-icon>
+        <ion-label position="stacked">Add Photo</ion-label>
+      </ion-item>
+      <ion-grid fixed>
+        <ion-row>
+          <ion-col size="3">
+            <ion-thumbnail>
+              <img src="assets/icons/add.svg">
+            </ion-thumbnail>
+          </ion-col>
+          <ion-col size="3">
+            <ion-thumbnail>
+              <img src="assets/icons/dummy.png">
+            </ion-thumbnail>
+          </ion-col>
+          <ion-col size="3">
+            <ion-thumbnail>
+              <img src="assets/icons/add.svg">
+            </ion-thumbnail>
+          </ion-col>
+          <ion-col size="3">
+            <ion-thumbnail>
+              <img src="assets/icons/dummy.png">
+            </ion-thumbnail>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-item>
+        <ion-icon slot="end" name="create"></ion-icon>
+        <ion-label>Event Detail</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-textarea rows="6" autofocus="true" class="ion-border" placeholder="Event description">
+        </ion-textarea>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Person can Enrolled</ion-label>
+        <ion-input type="number"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Event date & time</ion-label>       
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Start</ion-label>
+        <ion-datetime value="2019-10-01T15:43:40.394Z" display-timezone="utc"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">End</ion-label>
+        <ion-datetime value="2019-10-01T15:43:40.394Z" display-timezone="utc"></ion-datetime>
+      </ion-item>
+      <div class="container-form-btn ion-padding">
+        <button class="form-btn custom-font" type="submit" [routerLink]="['/select-location']">
+          Next
+        </button>
+      </div>
+    </ion-list>
+  </form>
+
+</ion-content>

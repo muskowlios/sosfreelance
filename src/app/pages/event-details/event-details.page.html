@@ -1,0 +1,55 @@
+<div class="top_header_user_detail">
+  <ion-item class="user_card">
+    <ion-thumbnail slot="start">
+      <img class="thumbnail_img" src="assets/icons/macclary.jpg">
+    </ion-thumbnail>
+    <ion-label>
+      <h2>CLAUDIA JOHN</h2>
+      <p><b>ACCIDENT</b></p>
+    </ion-label>
+    <div>
+      <p class="py-0 my-0">4.5 K <ion-icon name="star" color="secondary" slot="end"></ion-icon>
+      </p>
+      <p class="py-0 my-0"><b>450 M</b></p>
+    </div>
+    <ion-thumbnail slot="end">
+      <img class="card_thumbnail_icon" src="assets/icons/doctor icon.jpg">
+    </ion-thumbnail>
+  </ion-item>
+</div>
+
+<ion-content>
+  <div #map id="map"></div>
+</ion-content>
+
+
+<div class="app_footer">
+  <div class="detail_card">
+    <div class="header">
+      <h4>Event Details</h4>
+      <ion-icon name="chevron-down-outline"></ion-icon>
+    </div>
+    <div class="detail_card_body">
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+    </div>
+    <div class="detail_card_footer">
+      <div class="likes">
+        <ion-icon name="heart"></ion-icon>
+        <span>LIKE 2.7K</span>
+      </div>
+      <div class="enroll_btn">
+        <button class="btn btn-primary">Enroll</button>
+      </div>
+    </div>
+  </div>
+  <div class="footer_menu">
+    <div scrollX="true">
+      <ion-list class="scrollX" *ngFor="let item of [0,0]" scrollX="true">
+        <div class="menu_item">
+          <ion-icon name="close-circle-outline"></ion-icon>
+          <ion-label>Close</ion-label>
+        </div>
+      </ion-list>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,74 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="custom-font">Sign Up</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true" slot="fixed">
+  <div class="ion-padding">
+    <form class="ion-padding" [formGroup]="registerForm" (ngSubmit)="onSubmit()" novalidate>
+      <ion-item lines="none">        
+        <ion-img src="assets/icon/logo.jpg" style="width:50%; margin: auto;"></ion-img>      
+      </ion-item>
+      <div class="wrap-input" style="margin-top: 20px;">
+        <ion-item>
+          <ion-icon name="person-outline"></ion-icon>
+          <input class="input" type="text" formControlName="name" name="user-name" placeholder="Full Name">
+        </ion-item>
+      </div>
+
+      <div class="wrap-input">
+        <ion-item>
+          <ion-icon name="mail-outline"></ion-icon>
+          <input class="input" type="email" formControlName="email" name="user-email" placeholder="Email">
+        </ion-item>
+      </div>
+
+      <div class="wrap-input">
+        <ion-item>
+          <ion-icon name="call-outline"></ion-icon>
+          <input class="input" type="number" formControlName="mobile" name="user-contact" placeholder="Mobile">
+        </ion-item>
+      </div>
+
+      <div class="wrap-input">
+        <ion-item>
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <input class="input" type="password" name="password"  formControlName="password" placeholder="Password">
+        </ion-item>
+      </div>
+
+      <!-- <div class="wrap-input">
+        <ion-item>
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <input class="input" type="password" name="confirmpassword" placeholder="Confirm Password">
+        </ion-item>
+      </div>      -->
+      <div>
+        <p>
+          <ion-checkbox  formControlName="remember"></ion-checkbox>&nbsp;
+          <ion-label class="conditions">By clickling Sign Up, you agree to our <a>Terms and conditions</a> and <a>privacy policy.</a></ion-label>
+        </p>
+      </div>     
+
+      <div class="container-form-btn">
+        <button class="form-btn custom-font" (click)="register()" [disabled]="!registerForm.valid">
+          Sign Up
+        </button>
+      </div>
+    </form>  
+    <ion-grid class="ion-text-center">
+      <ion-row>
+        <ion-col>       
+            <ion-icon color="primary" name="logo-google" size="large"></ion-icon>&nbsp;  
+            <ion-icon color="primary" name="logo-facebook" size="large"></ion-icon>&nbsp;
+            <ion-icon color="primary" name="logo-linkedin" size="large"></ion-icon>        
+        </ion-col>     
+      </ion-row>
+    </ion-grid>
+    <p class="ion-text-center custom-font">Already have an account? <a [routerLink]="['/login']" >Sign In</a></p>
+  </div>
+</ion-content>

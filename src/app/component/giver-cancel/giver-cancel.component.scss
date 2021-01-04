@@ -1,0 +1,23 @@
+div{
+    width: 100%;
+    padding: 20px;
+    background: white !important;
+    overflow: auto;
+
+    ion-icon{
+        width: 100% ;
+    }
+
+    h5{
+        text-align: center;
+    }
+    div{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        ion-button{
+            text-transform: capitalize;
+        }
+    }
+}

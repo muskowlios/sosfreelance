@@ -1,0 +1,107 @@
+.header-background {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+  
+  ion-header{
+    height: 50px;
+  }
+  
+ion-title{
+    font-size: 16px;
+    font-weight: 500;
+    ion-icon{
+        margin-right: 10px;
+        align-items: center;
+    }
+}
+.stories-card {
+    margin: 0px;
+    margin-top: var(--ion-margin, 16px);
+    margin-left: var(--ion-margin, 8px);
+    border-radius: 0px;
+
+    .story-list {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .story-item {
+        --border-style:none;
+        --inner-padding-bottom: 0px;
+        --inner-padding-end: 0px;
+        --inner-padding-start: 0px;
+        --inner-padding-top: 0px;
+        --padding-end: 0px;
+        --padding-start: 0px;
+
+        margin: var(--ion-margin, 8px);
+        transition: all .1s ease-in-out;
+
+        &:active {
+            transform: scale(1.1);
+        }
+    }
+
+    .story-avatar {
+        box-shadow: 0 1px 1px 0px rgba(0, 0, 0, 0.2), -1px 1px 4px 0px rgba(0, 0, 0, 0.19);
+        background: white;
+        box-shadow: #3880ff;
+        height: 64px;
+        width: 64px;
+        padding: 2px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.seen {
+            background: var(--ion-color-light);
+        }
+
+        img {
+            border: 2px solid var(--background, white);
+            border-radius: 50%;
+            height: 34px;
+            width: 34px;
+            
+        }
+    }
+
+    .story-author {
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: var(--ion-margin, 8px);
+
+        .story-author-name{
+            font-size: 9px;
+        }
+    }
+}
+
+
+
+
+.notifications-badge {
+    background-color: #3880ff;
+    position: fixed;
+    top: 10px;
+    right: 4px;
+    border-radius: 100%;
+}
+
+*[scrollX=true] {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+  
+    &::-webkit-scrollbar {
+        display: none;
+    }
+  
+    .scrollX {
+        flex: 0 0 auto;
+    }
+  }

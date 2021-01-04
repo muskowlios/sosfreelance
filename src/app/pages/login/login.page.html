@@ -1,0 +1,54 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title class="custom-font">Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true" slot="fixed">
+
+  <div class="ion-padding">
+    <form class="ion-padding" [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
+      <ion-item lines="none">        
+        <ion-img src="assets/icon/logo.jpg" style="width:50%; margin: auto;"></ion-img>      
+      </ion-item>
+      <div class="wrap-input" style="margin-top: 20px;">
+        <ion-item>
+          <ion-icon name="person-outline"></ion-icon>
+          <input class="input form-control" type="text" name="user-name" formControlName="email" placeholder="Mobile/Email">
+        </ion-item>
+        <ion-item>
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <input class="input" formControlName="password" type="password" name="user-name" placeholder="Password">
+        </ion-item>
+      
+      </div>     
+
+      <div class="container-form-btn">
+        <button class="form-btn custom-font" type="submit">
+          Login
+        </button>
+      </div>
+    </form>  
+   
+    <ion-grid class="ion-text-center">
+      <ion-row>
+        <ion-col size="12">
+          <ion-item lines="none" class="ion-text-center" [routerLink]="['/forgot-password']">
+            <ion-label>Forgot Password?</ion-label>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>       
+            <ion-icon color="primary" name="logo-google" size="large"></ion-icon>&nbsp;  
+            <ion-icon color="primary" name="logo-facebook" size="large"></ion-icon>&nbsp;
+            <ion-icon color="primary" name="logo-linkedin" size="large"></ion-icon>        
+        </ion-col>     
+      </ion-row>
+    </ion-grid>
+    <p class="ion-text-center custom-font">Don't have an account yet? <a [routerLink]="['/register']" >Sign Up</a></p>
+  </div>
+</ion-content>

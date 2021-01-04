@@ -1,56 +1,83 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   public selectedIndex = 0;
   public appPages = [
     {
-      title: 'Inbox',
-      url: '/folder/Inbox',
-      icon: 'mail'
+      title: 'Home',
+      url: '/home',
+      icon: 'home'
     },
     {
-      title: 'Outbox',
-      url: '/folder/Outbox',
+      title: 'Ask Around You',
+      url: '/ask-around-you',
       icon: 'paper-plane'
     },
     {
-      title: 'Favorites',
-      url: '/folder/Favorites',
-      icon: 'heart'
+      title: 'Issues',
+      url: '/issues',
+      icon: 'construct'
     },
     {
-      title: 'Archived',
-      url: '/folder/Archived',
-      icon: 'archive'
+      title: 'Events',
+      url: '/event',
+      icon: 'aperture'
     },
     {
-      title: 'Trash',
-      url: '/folder/Trash',
-      icon: 'trash'
+      title: 'Notifications',
+      url: '/notifications',
+      icon: 'notifications'
     },
     {
-      title: 'Spam',
-      url: '/folder/Spam',
-      icon: 'warning'
-    }
+      title: 'Settings',
+      url: '/settings',
+      icon: 'settings'
+    },
+    {
+      title: 'Help',
+      url: '/help-center',
+      icon: 'man'
+    },
+    {
+      title: 'FAQ',
+      url: '/faq',
+      icon: 'documents'
+    },
+    {
+      title: 'Policies',
+      url: '/privacy-policy',
+      icon: 'book'
+    },   
+    {
+      title: 'About Us',
+      url: '/about-us',
+      icon: 'information-circle'
+    }   
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
-
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    private router : Router
   ) {
     this.initializeApp();
+  }
+
+  ngOnInit() {
+    const path = window.location.pathname.split('folder/')[1];
+    if (path !== undefined) {
+      this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
+    }
   }
 
   initializeApp() {
@@ -59,11 +86,11 @@ export class AppComponent implements OnInit {
       this.splashScreen.hide();
     });
   }
+  logOut(){
+    this.router.navigate(['/login']);
+  }
+  goToProfile(){
+    this.router.navigate(['/user-profile']);
 
-  ngOnInit() {
-    const path = window.location.pathname.split('folder/')[1];
-    if (path !== undefined) {
-      this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
-    }
   }
 }

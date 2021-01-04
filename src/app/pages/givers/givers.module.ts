@@ -5,7 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 
 import { GiversPageRoutingModule } from './givers-routing.module';
-import { FlexLayoutModule } from '@angular/flex-layout';
+
 import { GiversPage } from './givers.page';
 
 @NgModule({
@@ -13,7 +13,6 @@ import { GiversPage } from './givers.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    FlexLayoutModule,
     GiversPageRoutingModule
   ],
   declarations: [GiversPage]

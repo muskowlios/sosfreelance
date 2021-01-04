@@ -1,0 +1,28 @@
+<ion-header translucent class="ion-no-border">
+  <ion-toolbar class="top_header_navbar">
+    <ion-buttons slot="start">
+      <a href="javascript:history.back()" class="back_btn"><ion-icon name="arrow-back-outline"></ion-icon></a>
+    </ion-buttons>
+    <ion-title class="navbar_title">Select Issue Categories</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="stories-card" scrollX="true">
+    <ion-list class="story-list scrollX" *ngFor="let story of stories; index as i">
+      <ion-item class="story-item">
+        <ion-avatar class="story-avatar" [ngClass]="{'seen': false}">
+          <img [src]="story.image">
+          <ion-badge class="notifications-badge" color="primary" *ngIf="i==2">
+            <ion-icon name="checkmark"></ion-icon>
+          </ion-badge>
+        </ion-avatar>
+      </ion-item>
+      <div class="story-author">
+        <ion-text class="story-author-name">
+          {{story.first_name}}
+        </ion-text>
+      </div>
+    </ion-list>
+  </div>
+</ion-content>
