@@ -33,6 +33,33 @@ ion-item-option{
   }
 }
 
+
+.top_header_scrolled_menu_list{
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  .menu_list_item{
+    border-right: 1px solid #2222;
+    display: flex;
+    align-items: center;
+    padding: 4px 6px;
+    img{
+      width: 16px;
+      margin-right: 3px;
+    }
+    span{
+      font-size: 11px;
+    }
+  }
+  .menu_list_item:last-child{
+    border-right: none;
+  }
+  .menu_list_item.active{
+    border-bottom: 2px solid var(--primary);
+  }
+}
+
 .scroll_y_list{
   width: 100%;
   height: 350px;

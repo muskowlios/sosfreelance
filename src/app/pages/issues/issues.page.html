@@ -9,15 +9,23 @@
     </ion-buttons>
   </ion-toolbar>
   <div class="top_header_scrolled_menu_list">
-    <div scrollX="true">
-      <ion-list class="scrollX" *ngFor="let item of [0,0,0,0]; index as i" scrollX="true">
-        <div class="menu_item" [ngClass]="{active: i==0}">
-          <img src="../../../assets/icons/verified-icon-png-5.jpg" alt="">
-          <span>Asked by you</span>
-        </div>
-      </ion-list>
+    <div class="menu_list_item active">
+      <img src="../../../assets/icons/verified-icon-png-5.jpg" alt="">
+      <span>My Issues</span>
     </div>
-  </div>
+    <div class="menu_list_item">
+      <img src="../../../assets/icons/verified-icon-png-5.jpg" alt="">
+      <span>New Issues</span>
+    </div>
+    <div class="menu_list_item">
+      <img src="../../../assets/icons/verified-icon-png-5.jpg" alt="">
+      <span>In Progress</span>
+    </div>
+    <div class="menu_list_item">
+      <img src="../../../assets/icons/verified-icon-png-5.jpg" alt="">
+      <span>Completed</span>
+    </div>
+</div> 
 </ion-header>
 
 <ion-content>
