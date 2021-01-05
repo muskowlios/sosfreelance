@@ -1,7 +1,9 @@
 <ion-header translucent class="ion-no-border">
   <ion-toolbar>
     <ion-title>
-      <ion-icon name="arrow-back-outline"></ion-icon>
+      <ion-buttons slot="start">
+        <a href="javascript:history.back()" class="back_btn"><ion-icon name="arrow-back-outline"></ion-icon></a>
+      </ion-buttons>
       View Media
     </ion-title>
   </ion-toolbar>
@@ -14,12 +16,10 @@
     <ion-label>Photos</ion-label>
   </div>
   <div scrollX="true" class="img">
-    <ion-list class="scrollX" *ngFor="let item of [0,0,0,0,0,0,0];index as i" scrollX="true">
-      <!-- <ion-item> -->
-        <ion-thumbnail (click)="onShowImageModal(i)">
-          <img src="../../../assets/icons/macclary.jpg">
+    <ion-list class="scrollX" *ngFor="let img of images;index as i" scrollX="true">
+        <ion-thumbnail (click)="onShowImageModal(img?.img_url)">
+          <img [src]="img?.img_url">
         </ion-thumbnail>
-      <!-- </ion-item> -->
     </ion-list>
   </div>
 </div>
@@ -29,13 +29,11 @@
     <ion-label>videos</ion-label>
   </div>
   <div scrollX="true" class="img">
-    <ion-list class="scrollX" *ngFor="let item of [0,0,0,0,0,0,0]; index as i" scrollX="true">
-      <!-- <ion-item> -->
-        <ion-thumbnail (click)="onShowImageModal(i)">
-          <img src="../../../assets/icons/macclary.jpg">
-        </ion-thumbnail>
-      <!-- </ion-item> -->
-    </ion-list>
+    <ion-list class="scrollX" *ngFor="let img of images;index as i" scrollX="true">
+      <ion-thumbnail (click)="onShowImageModal(img?.img_url)">
+        <img [src]="img?.img_url">
+      </ion-thumbnail>
+  </ion-list>
   </div>
 </div>
 <div>
@@ -65,7 +63,6 @@
 
 <div class="image_modal" *ngIf="showImageModal" (click)="onShowImageModal()">
   <div class="container">
-    <img src="../../../assets/icons/macclary.jpg" alt="">
-    {{currentImgSrc}}
+    <img [src]="currentImgSrc" alt="">
   </div>
 </div>

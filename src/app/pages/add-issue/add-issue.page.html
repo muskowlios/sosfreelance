@@ -1,7 +1,7 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
+      <a href="javascript:history.back()" class="back_btn"><ion-icon name="arrow-back-outline"></ion-icon></a>
     </ion-buttons>
     <ion-title class="custom-font">Create New Issue</ion-title>
   </ion-toolbar>
@@ -51,7 +51,7 @@
   </ion-item>  
 
   <div class="img-fluid">
-    <img src="assets/icons/dummy.png">
+    <img [src]="currentImageView">
   </div>
   <ion-card class="stories-card" scrollX="true">
     <ion-list class="story-list">
@@ -64,10 +64,10 @@
         </ion-thumbnail>        
       </ion-item>  
     </ion-list>
-    <ion-list class="story-list scrollX" *ngFor="let story of stories;index as i" >
-      <ion-item class="story-item" (click)="onViewFullImage(i)">
+    <ion-list class="story-list scrollX" *ngFor="let img of images;index as i" >
+      <ion-item class="story-item" (click)="onViewFullImage(img?.img_url)">
         <ion-thumbnail>
-          <img src="assets/icons/dummy.png">
+          <img [src]="img?.img_url">
         </ion-thumbnail>
       </ion-item>     
     </ion-list>

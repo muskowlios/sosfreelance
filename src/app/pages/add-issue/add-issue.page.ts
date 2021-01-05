@@ -24,13 +24,34 @@ export class AddIssuePage implements OnInit {
   ngOnInit() {
   }
 
+
+  images: any[] = [
+    {
+      img_url: "https://b.zmtcdn.com/data/dish_photos/a8c/7811925c2d8e585ac32285c762a68a8c.jpg?output-format=webp&fit=around|130:130&crop=130:130;*,*"
+    },
+    {
+      img_url: "https://b.zmtcdn.com/data/dish_photos/9d3/1864a3aa92305de92b7a2ff96b96b9d3.jpg?output-format=webp&fit=around|130:130&crop=130:130;*,*"
+    },
+    {
+      img_url: "https://b.zmtcdn.com/data/dish_photos/fe6/832785bc97d556f61a0d5923565cefe6.jpg?output-format=webp&fit=around|130:130&crop=130:130;*,*"
+    },
+    {
+      img_url: "https://b.zmtcdn.com/data/dish_photos/922/596c1529a43e40d91d22f2bce5cf5922.jpg?output-format=webp&fit=around|130:130&crop=130:130;*,*"
+    },
+    {
+      img_url: "https://b.zmtcdn.com/data/dish_photos/f73/8178ce79bebd9c2dc44072f3ce07df73.jpg?output-format=webp&fit=around|130:130&crop=130:130;*,*"
+    },
+    {
+      img_url: "https://b.zmtcdn.com/data/dish_photos/f65/06563713d0728a678bc76a7fe1803f65.jpg?output-format=webp&fit=around|130:130&crop=130:130;*,*"
+    },
+  ]
+
   onSelected(){
     this.selected = !this.selected;
   }
 
-  currentImageView;
-  onViewFullImage(i, src){
-    alert(i)
+  currentImageView = "assets/icons/camera.png";
+  onViewFullImage(src){
     this.currentImageView = src;
   }
 

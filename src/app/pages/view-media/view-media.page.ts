@@ -21,6 +21,24 @@ export class ViewMediaPage implements OnInit {
   showImageModal:boolean = false;
   currentImgSrc;
 
+  images:any[] = [
+    {
+      img_url:"https://b.zmtcdn.com/data/dish_photos/7d8/b011ceb4d889a635e9bf26e47aadb7d8.jpg?output-format=webp&fit=around|130:130&crop=130:130;*,*"
+    },
+    {
+      img_url:"https://b.zmtcdn.com/data/dish_photos/925/277dba667342b92fcd9383aa8015a925.jpg?output-format=webp&fit=around|130:130&crop=130:130;*,*"
+    },
+    {
+      img_url:"https://b.zmtcdn.com/data/dish_photos/6c6/cb77a6ea31c0c955a0858dba2fd676c6.jpg?output-format=webp&fit=around|130:130&crop=130:130;*,*"
+    },
+    {
+      img_url:"https://b.zmtcdn.com/data/dish_photos/0fe/72dbecebd65a5d6ce10c28586f2d10fe.jpg?output-format=webp&fit=around|130:130&crop=130:130;*,*"
+    },
+    {
+      img_url:"https://b.zmtcdn.com/data/dish_photos/a8c/7811925c2d8e585ac32285c762a68a8c.jpg?output-format=webp&fit=around|130:130&crop=130:130;*,*"
+    },
+  ]
+
   ngOnInit() {
   }
 
