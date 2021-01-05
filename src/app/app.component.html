@@ -32,7 +32,7 @@
             <li [routerLink]="[menu_item.url]" routerLinkActive="active" dex(click)="selectedIn = i" routerDirection="root" lines="none" detail="false" [class.selected]="selectedIndex == i">{{menu_item?.title}}</li>
           </ng-container> -->
             <ng-container *ngFor="let menu_item of appPages; let i = index">
-              <li [routerLink]="[menu_item.url]" routerLinkActive="active">{{menu_item?.title}}</li>
+              <li [routerLink]="[menu_item.url]" routerLinkActive="active" (click)="closeMenu()">{{menu_item?.title}}</li>
             </ng-container>
             <li (click)="logOut()">LogOut</li>
           </ul>

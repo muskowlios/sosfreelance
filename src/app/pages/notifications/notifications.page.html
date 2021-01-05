@@ -1,56 +1,55 @@
-<!-- <ion-header class="ion-no-border">
-  <ion-toolbar>
+<ion-header translucent class="ion-no-border">
+  <ion-toolbar class="top_header_navbar">
     <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
+      <a href="javascript:history.back()" class="back_btn"><ion-icon name="arrow-back-outline"></ion-icon></a>
     </ion-buttons>
-    <ion-title class="custom-font">Notifications</ion-title>
-  </ion-toolbar>
-</ion-header> -->
-<ion-header class="ion-no-border">
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-menu-button ></ion-menu-button>
-    </ion-buttons>
-    <ion-title class="custom-font">Notifications</ion-title>   
+    <ion-title class="navbar_title">Notifications</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list lines="none">   
-      <ion-item-group  >
-        <ion-item-divider color="light">Today</ion-item-divider>
-        <ion-item *ngFor="let item of [0,0,0,0]">
-          <ion-thumbnail slot="start">
-            <img src="assets/icons/dummy.png">
-          </ion-thumbnail>
-          <ion-label>
-            <h1>Cladia John</h1>
-            <p>Accident</p>
-          </ion-label>
-          <ion-label>
-            <h2>4.5 K <ion-icon name="star" slot="end"></ion-icon>
-            </h2>
-            <p>460 M</p>
-          </ion-label>
-          <ion-icon name="rose" slot="end"></ion-icon>
-        </ion-item>
-        <ion-item-divider color="light">Yesterday</ion-item-divider>
-        <ion-item *ngFor="let item of [0,0,0,0]">
-          <ion-thumbnail slot="start">
-            <img src="assets/icons/dummy.png">
-          </ion-thumbnail>
-          <ion-label>
-            <h1>Cladia John</h1>
-            <p>Accident</p>
-          </ion-label>
-          <ion-label>
-            <h2>4.5 K <ion-icon name="star" slot="end"></ion-icon>
-            </h2>
-            <p>460 M</p>
-          </ion-label>
-          <ion-icon name="rose" slot="end"></ion-icon>
-        </ion-item>
-      </ion-item-group>
-  </ion-list>
-  
+  <div class="app_body">
+    <ion-list class="detailList">
+      <div class="list_title">
+        <ion-label>Today</ion-label>
+      </div>
+      <div class="scroll_y_list">
+        <ion-item-sliding  *ngFor="let item of [0,0]">
+          <ion-item style="--border-style:none;padding: 0;margin-bottom: 10px;">
+            <ion-thumbnail slot="start">
+              <img class="thumbnail_img" src="assets/icons/macclary.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h1>Cladia John</h1>
+              <p>Question 1</p>
+            </ion-label> 
+            <p>4.5 K <ion-icon name="star" color="secondary" slot="end"></ion-icon> </p>
+            <ion-thumbnail slot="end">
+              <img class="card_thumbnail_icon" src="assets/icons/doctor icon.jpg">
+            </ion-thumbnail>        
+          </ion-item>
+        </ion-item-sliding> 
+      </div>
+      <div class="list_title">
+        <ion-label>Yesterday</ion-label>
+      </div>
+      <div class="scroll_y_list">
+        <ion-item-sliding  *ngFor="let item of [0,0,0]">
+          <ion-item style="--border-style:none;padding: 0;margin-bottom: 10px;">
+            <ion-thumbnail slot="start">
+              <img class="thumbnail_img" src="assets/icons/macclary.jpg">
+            </ion-thumbnail>
+            <ion-label>
+              <h1>Cladia John</h1>
+              <p>Question 1</p>
+            </ion-label> 
+            <p>4.5 K <ion-icon name="star" color="secondary" slot="end"></ion-icon> </p>
+            <ion-thumbnail slot="end">
+              <img class="card_thumbnail_icon" src="assets/icons/doctor icon.jpg">
+            </ion-thumbnail>        
+          </ion-item>
+        </ion-item-sliding> 
+      </div>
+    </ion-list>
+  </div>    
 </ion-content>
