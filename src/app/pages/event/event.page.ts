@@ -20,7 +20,4 @@ export class EventPage implements OnInit {
   addEvent(){
     this.router.navigate(['/add-event']);
   }
-  unread(data){
-
-  }
 }

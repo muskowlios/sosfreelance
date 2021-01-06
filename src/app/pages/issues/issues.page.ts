@@ -20,10 +20,6 @@ export class IssuesPage implements OnInit {
   addIssue(){
     this.router.navigate(['/add-issue']);
   }
-
-  unread(data){
-
-  }
   goToDetail(){
     this.router.navigate(['/issue-details']);
 
