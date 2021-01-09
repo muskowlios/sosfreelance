@@ -54,13 +54,13 @@ a.back_btn {
 }
 
 ion-header {
-	height: 100px;
+	// height: 100px;
 	background: #fff;
 	ion-toolbar.top_header_navbar {
 		padding: 0 20px;
 		ion-title.navbar_title {
-			font-size: 15px;
-			font-weight: 400;
+			// font-size: 15px;
+			// font-weight: 400;
 		}
 	}
 	.top_header_scrolled_menu_list {
@@ -291,111 +291,29 @@ button[type=submit]:focus{
 }
 
 
-.btn {
-    display: inline-block;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
-    text-align: center;
-    text-decoration: none;
-    vertical-align: middle;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    background-color: transparent;
-    border: 1px solid transparent;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    border-radius: .25rem;
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out
-}
 
-
-$primary_btn_bg_color: var(--primary);
-$danger_btn_bg_color: #dc3545;
-
-
-
-
-.btn-primary {
-    color: #fff;
-    background-color: $primary_btn_bg_color;
-    border-color: $primary_btn_bg_color;
-}
-.btn-primary:hover {
-    color: #fff;
-    background-color: $primary_btn_bg_color;
-    border-color: $primary_btn_bg_color
-}
-.btn-check:focus + .btn-primary,
-.btn-primary:focus {
-	outline: none;
-    color: #fff;
-    background-color: $primary_btn_bg_color;
-    border-color: $primary_btn_bg_color;
-    box-shadow: none;
-}
-.btn-check:active + .btn-primary,
-.btn-check:checked + .btn-primary,
-.btn-primary.active,
-.btn-primary:active,
-.show > .btn-primary.dropdown-toggle {
-    color: #fff;
-    background-color: $primary_btn_bg_color;
-    border-color: $primary_btn_bg_color
-}
-.btn-check:active + .btn-primary:focus,
-.btn-check:checked + .btn-primary:focus,
-.btn-primary.active:focus,
-.btn-primary:active:focus,
-.show > .btn-primary.dropdown-toggle:focus {
-    box-shadow: none
-}
-.btn-primary.disabled,
-.btn-primary:disabled {
-    color: #fff;
-    background-color:$primary_btn_bg_color;
-    border-color: $primary_btn_bg_color
-}
-// danger_btn_bg_color
-.btn-danger {
-    color: #fff;
-    background-color: $danger_btn_bg_color;
-    border-color: $danger_btn_bg_color;
-}
-.btn-danger:hover {
-    color: #fff;
-    background-color: $danger_btn_bg_color;
-    border-color: $danger_btn_bg_color
-}
-.btn-check:focus + .btn-danger,
-.btn-danger:focus {
-	outline: none;
-    color: #fff;
-    background-color: $danger_btn_bg_color;
-    border-color: $danger_btn_bg_color;
-    box-shadow: none;
-}
-.btn-check:active + .btn-danger,
-.btn-check:checked + .btn-danger,
-.btn-danger.active,
-.btn-danger:active,
-.show > .btn-danger.dropdown-toggle {
-    color: #fff;
-    background-color: $danger_btn_bg_color;
-    border-color: $danger_btn_bg_color
-}
-.btn-check:active + .btn-danger:focus,
-.btn-check:checked + .btn-danger:focus,
-.btn-danger.active:focus,
-.btn-danger:active:focus,
-.show > .btn-danger.dropdown-toggle:focus {
-    box-shadow: none
-}
-.btn-danger.disabled,
-.btn-danger:disabled {
-    color: #fff;
-    background-color:$danger_btn_bg_color;
-    border-color: $danger_btn_bg_color
-}
+// segment scroll
+ion-header{
+	ion-segment.segment_scroll{
+	  overflow-x: scroll;
+	  ion-segment-button{
+		.segment_item{
+		  display: flex !important;
+		  align-items: center !important;
+		  img{
+			width: 20px;
+			margin-left: 5px;
+			margin-right: 5px;
+		  }
+		  span{
+			padding: 0;
+			font-size: 12px;
+			color: #222;
+		  }
+		}
+	  }
+	}
+	ion-segment.segment_scroll::-webkit-scrollbar{
+	  display: none;
+	}
+  }

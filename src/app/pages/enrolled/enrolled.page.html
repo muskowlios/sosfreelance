@@ -1,20 +1,38 @@
 <ion-header translucent class="ion-no-border">
   <ion-toolbar class="top_header_navbar">
     <ion-buttons slot="start">
-      <a href="javascript:history.back()" class="back_btn"><ion-icon name="arrow-back-outline"></ion-icon></a>
+      <a href="javascript:history.back()" class="back_btn">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </a>
     </ion-buttons>
     <ion-title class="navbar_title">Enrolled</ion-title>
   </ion-toolbar>
-  <div class="top_header_scrolled_menu_list">
+  <!-- <div class="top_header_scrolled_menu_list">
     <div class="menu_list_item active">
-      <img src="../../../assets/icons/verified-icon-png-5.jpg" alt="">
+      <img src="assets/icons/verified-icon-png-5.jpg" alt="">
       <span>Pending</span>
     </div>
     <div class="menu_list_item">
-      <img src="../../../assets/icons/verified-icon-png-5.jpg" alt="">
+      <img src="assets/icons/verified-icon-png-5.jpg" alt="">
       <span>Approved</span>
     </div>
-</div>
+  </div> -->
+
+    <!-- Segment with anchors -->
+    <ion-segment (ionChange)="segmentChanged($event)" class="segment_scroll">
+      <ion-segment-button value="dogs" class="scroll_X">
+        <div class="segment_item">
+          <img src="assets/icons/verified-icon-png-5.jpg" alt="">
+          <span>Pending</span>
+        </div>
+      </ion-segment-button>
+      <ion-segment-button value="cats" class="scroll_X">
+        <div class="segment_item">
+          <img src="assets/icons/verified-icon-png-5.jpg" alt="">
+          <span>Approved</span>
+        </div>
+      </ion-segment-button>
+     </ion-segment>
 </ion-header>
 
 <!-- <ion-content>
@@ -71,8 +89,8 @@
 <!-- New -->
 <ion-content>
   <div class="app_body">
-    <ion-list class="detailList">    
-      <ion-item-sliding  *ngFor="let item of [0,0,0,0]">
+    <ion-list class="detailList">
+      <ion-item-sliding *ngFor="let item of [0,0,0,0]">
         <ion-item style="--border-style:none;padding: 0;margin-bottom: 10px;">
           <ion-thumbnail slot="start">
             <img class="thumbnail_img" src="assets/icons/macclary.jpg">
@@ -80,28 +98,29 @@
           <ion-label>
             <h1>Cladia John</h1>
             <p>Question 1</p>
-          </ion-label> 
-          <p>4.5 K <ion-icon name="star" color="secondary" slot="end"></ion-icon> </p>
+          </ion-label>
+          <p>4.5 K <ion-icon name="star" color="secondary" slot="end"></ion-icon>
+          </p>
           <ion-thumbnail slot="end">
             <img class="card_thumbnail_icon" src="assets/icons/doctor icon.jpg">
-          </ion-thumbnail>        
+          </ion-thumbnail>
         </ion-item>
         <ion-item-options side="end">
           <ion-item-option color="success">
             <ion-icon size="small" name="call-outline" slot="top"></ion-icon>
-              <ion-label>Call</ion-label>
+            <ion-label>Call</ion-label>
           </ion-item-option>
           <ion-item-option>
             <ion-icon size="small" name="chatbubbles-outline" slot="top"></ion-icon>
-              <ion-label>Chat</ion-label>
+            <ion-label>Chat</ion-label>
           </ion-item-option>
           <ion-item-option color="danger">
             <ion-icon size="small" name="close-circle-outline" slot="top"></ion-icon>
-              <ion-label>Cancel</ion-label>
+            <ion-label>Cancel</ion-label>
           </ion-item-option>
         </ion-item-options>
-      </ion-item-sliding> 
-      
+      </ion-item-sliding>
+
     </ion-list>
-  </div>    
+  </div>
 </ion-content>

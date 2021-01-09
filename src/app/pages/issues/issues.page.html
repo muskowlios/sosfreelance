@@ -1,31 +1,59 @@
 <ion-header translucent class="ion-no-border">
   <ion-toolbar class="top_header_navbar">
     <ion-buttons slot="start">
-      <a href="javascript:history.back()" class="back_btn"><ion-icon name="arrow-back-outline"></ion-icon></a>
+      <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title class="navbar_title">Issues</ion-title>
     <ion-buttons slot="end">
-      <ion-icon slot="start" name="add" color="primary"></ion-icon>
+      <ion-icon slot="start" name="add" color="primary" [routerLink]="['/add-issue']"></ion-icon>
     </ion-buttons>
   </ion-toolbar>
-  <div class="top_header_scrolled_menu_list">
+  <!-- <div class="top_header_scrolled_menu_list">
     <div class="menu_list_item active">
-      <img src="../../../assets/icons/verified-icon-png-5.jpg" alt="">
+      <img src="assets/icons/verified-icon-png-5.jpg" alt="">
       <span>My Issues</span>
     </div>
     <div class="menu_list_item">
-      <img src="../../../assets/icons/verified-icon-png-5.jpg" alt="">
+      <img src="assets/icons/verified-icon-png-5.jpg" alt="">
       <span>New Issues</span>
     </div>
     <div class="menu_list_item">
-      <img src="../../../assets/icons/verified-icon-png-5.jpg" alt="">
+      <img src="assets/icons/verified-icon-png-5.jpg" alt="">
       <span>In Progress</span>
     </div>
     <div class="menu_list_item">
-      <img src="../../../assets/icons/verified-icon-png-5.jpg" alt="">
+      <img src="assets/icons/verified-icon-png-5.jpg" alt="">
       <span>Completed</span>
     </div>
-</div> 
+  </div> -->
+
+  <!-- Segment with anchors -->
+  <ion-segment (ionChange)="segmentChanged($event)" class="segment_scroll">
+    <ion-segment-button value="dogs" class="scroll_X">
+      <div class="segment_item">
+        <img src="assets/icons/verified-icon-png-5.jpg" alt="">
+        <span>My Issues</span>
+      </div>
+    </ion-segment-button>
+    <ion-segment-button value="cats" class="scroll_X">
+      <div class="segment_item">
+        <img src="assets/icons/verified-icon-png-5.jpg" alt="">
+        <span>New Issues</span>
+      </div>
+    </ion-segment-button>
+    <ion-segment-button value="homme" class="scroll_X">
+      <div class="segment_item">
+        <img src="assets/icons/verified-icon-png-5.jpg" alt="">
+        <span>In Progress</span>
+      </div>
+    </ion-segment-button>
+    <ion-segment-button value="address" class="scroll_X">
+      <div class="segment_item">
+        <img src="assets/icons/verified-icon-png-5.jpg" alt="">
+        <span>Completed</span>
+      </div>
+    </ion-segment-button>
+   </ion-segment>
 </ion-header>
 
 <ion-content>
@@ -35,7 +63,7 @@
         <ion-label>Created by you</ion-label>
       </div>
       <div class="scroll_y_list">
-        <ion-item-sliding  *ngFor="let item of [0,0,0,0,0,0,0,0]">
+        <ion-item-sliding *ngFor="let item of [0,0,0,0,0,0,0,0]">
           <ion-item (click)="goToDetail()" style="--border-style:none;padding: 0;margin-bottom: 10px;">
             <ion-thumbnail slot="start">
               <img class="thumbnail_img" src="assets/icons/macclary.jpg">
@@ -43,25 +71,26 @@
             <ion-label>
               <h1>Cladia John</h1>
               <p>Question 1</p>
-            </ion-label> 
-            <p>4.5 K <ion-icon name="star" color="secondary" slot="end"></ion-icon> </p>
+            </ion-label>
+            <p>4.5 K <ion-icon name="star" color="secondary" slot="end"></ion-icon>
+            </p>
             <ion-thumbnail slot="end">
               <img class="card_thumbnail_icon" src="assets/icons/doctor icon.jpg">
-            </ion-thumbnail>        
+            </ion-thumbnail>
           </ion-item>
           <ion-item-options side="end">
-            <ion-item-option>
+            <ion-item-option (click)="unread()">
               <ion-icon size="small" name="person-circle-outline" slot="top"></ion-icon>
-                <ion-label></ion-label>
-          </ion-item-option>
+              <ion-label></ion-label>
+            </ion-item-option>
           </ion-item-options>
-        </ion-item-sliding> 
+        </ion-item-sliding>
       </div>
       <div class="list_title">
         <ion-label>Applied by you</ion-label>
       </div>
       <div class="scroll_y_list">
-        <ion-item-sliding  *ngFor="let item of [0,0,0,0,0,0,0]">
+        <ion-item-sliding *ngFor="let item of [0,0,0,0,0,0,0]">
           <ion-item (click)="goToDetail()" style="--border-style:none;padding: 0;margin-bottom: 10px;">
             <ion-thumbnail slot="start">
               <img class="thumbnail_img" src="assets/icons/macclary.jpg">
@@ -69,21 +98,22 @@
             <ion-label>
               <h1>Cladia John</h1>
               <p>Question 1</p>
-            </ion-label> 
-            <p>4.5 K <ion-icon name="star" color="secondary" slot="end"></ion-icon> </p>
+            </ion-label>
+            <p>4.5 K <ion-icon name="star" color="secondary" slot="end"></ion-icon>
+            </p>
             <ion-thumbnail slot="end">
               <img class="card_thumbnail_icon" src="assets/icons/doctor icon.jpg">
-            </ion-thumbnail>        
+            </ion-thumbnail>
           </ion-item>
           <ion-item-options side="end">
-            <ion-item-option>
+            <ion-item-option (click)="unread()">
               <ion-icon size="small" name="person-circle-outline" slot="top"></ion-icon>
-                <ion-label></ion-label>
-          </ion-item-option>
+              <ion-label></ion-label>
+            </ion-item-option>
           </ion-item-options>
-        </ion-item-sliding> 
+        </ion-item-sliding>
       </div>
-      
+
     </ion-list>
-  </div>    
+  </div>
 </ion-content>

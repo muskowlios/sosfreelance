@@ -1,3 +1,12 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="top_header_navbar">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title  class="navbar_title">Issue Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
 <div class="top_header_user_detail">
   <ion-item class="user_card">
     <ion-thumbnail slot="start">
@@ -52,7 +61,19 @@
   </div>
   <div class="footer_menu">
     <div scrollX="true">
-      <ion-list class="scrollX" *ngFor="let item of [0,0,0,0]" scrollX="true">
+      <ion-list class="scrollX" scrollX="true">
+        <div class="menu_item"  [routerLink]="['/givers']">
+          <ion-icon name="close-circle-outline"></ion-icon>
+          <ion-label>Givers</ion-label>
+        </div>
+        <div class="menu_item"  [routerLink]="['/view-media']">
+          <ion-icon name="close-circle-outline"></ion-icon>
+          <ion-label>View media</ion-label>
+        </div>
+        <div class="menu_item"  (click)="feedback()">
+          <ion-icon name="close-circle-outline"></ion-icon>
+          <ion-label>Get Direction</ion-label>
+        </div>
         <div class="menu_item"  (click)="feedback()">
           <ion-icon name="close-circle-outline"></ion-icon>
           <ion-label>Close</ion-label>

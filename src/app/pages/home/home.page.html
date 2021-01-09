@@ -1,13 +1,28 @@
 <!-- Header -->
 <ion-header class="ion-no-border top_header">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-menu-button>
+          <ion-icon name="apps" color="primary"></ion-icon>
+        </ion-menu-button>
+      </ion-button>
+    </ion-buttons>
+
+    <ion-buttons slot="end">
+      <ion-button class="bordered" fill="solid" color="light" [routerLink]="['/notifications']">
+        <ion-icon name="notifications" color="primary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
   <div class="serach_bar_header">
     <!-- User avtar image -->
     <ion-avatar slot="start">
-      <img src="../../../assets/icons/macclary.jpg">
+      <img src="assets/icons/macclary.jpg">
     </ion-avatar>
     <!-- Ask around search input -->
-    <div class="search_input_bar">
-      <input type="search" placeholder="Ask around you..." [routerLink]="['/add-ask-around-you']">
+    <div class="search_input_bar" [routerLink]="['/add-ask-around-you']">
+      <input type="search" placeholder="Ask around you..." >
       <ion-icon name="search-outline"></ion-icon>
     </div>
   </div>
@@ -24,7 +39,7 @@
   <div class="home_footer_btns">
     <button class="home_btn home_left_btn" (click)="getHelp()">GET</button>
     <button class="home_btn home_center_btn" (click)="emergencyBtn()"></button>
-    <button class="home_btn home_right_btn" (click)="getHelp()">GIVE</button>
+    <button class="home_btn home_right_btn" (click)="giveHelp()">GIVE</button>
   </div>
 </ion-item-divider>
 <app-slide-drawer class="bottom_list_swapper">
@@ -32,7 +47,7 @@
     <ng-container *ngFor="let item of [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]">
       <div class="list_item">
         <ion-thumbnail slot="start">
-          <img class="user_profile_img" src="../../../assets/icons/macclary.jpg">
+          <img class="user_profile_img" src="assets/icons/macclary.jpg">
         </ion-thumbnail>
         <div class="user_details">
           <ion-label>

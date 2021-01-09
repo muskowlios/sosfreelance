@@ -1,3 +1,12 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="top_header_navbar">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title  class="navbar_title">Event Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
 <div class="top_header_user_detail">
   <ion-item class="user_card">
     <ion-thumbnail slot="start">
@@ -25,11 +34,11 @@
 
 <div class="app_footer">
   <div class="detail_card">
-    <div class="header">
+    <div class="header" (click)="onShowEventDetail()">
       <h4>Event Details</h4>
       <ion-icon name="chevron-down-outline"></ion-icon>
     </div>
-    <div class="detail_card_body">
+    <div class="detail_card_body" *ngIf="eventDetailsCardBody">
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
     </div>
     <div class="detail_card_footer">
@@ -37,7 +46,7 @@
         <ion-icon name="heart"></ion-icon>
         <span>LIKE 2.7K</span>
       </div>
-      <div class="enroll_btn">
+      <div class="enroll_btn" [routerLink]="['/enrolled']" >
         <button class="btn btn-primary">Enroll</button>
       </div>
     </div>

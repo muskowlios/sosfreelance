@@ -23,6 +23,7 @@ export class EventDetailsPage implements OnInit {
   latitude: number;
   longitude: number;
   dataReturned: any;
+  eventDetailsCardBody:boolean = false;
 
   constructor(private geolocation: Geolocation,
     private nativeGeocoder: NativeGeocoder,
@@ -137,5 +138,8 @@ export class EventDetailsPage implements OnInit {
     });
 
     await alert.present();
+  }
+  onShowEventDetail(){
+    this.eventDetailsCardBody = !this.eventDetailsCardBody;
   }
 }

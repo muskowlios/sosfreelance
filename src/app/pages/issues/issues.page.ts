@@ -16,9 +16,14 @@ export class IssuesPage implements OnInit {
 
   segmentChanged(data: any){
     this.issueslist = data.target.value;
+    console.log(data.target.value)
   }
   addIssue(){
     this.router.navigate(['/add-issue']);
+  }
+
+  unread(){
+
   }
   goToDetail(){
     this.router.navigate(['/issue-details']);

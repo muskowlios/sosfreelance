@@ -1,13 +1,12 @@
-<ion-header translucent class="ion-no-border">
-  <ion-toolbar>
-    <ion-title>
-      <ion-buttons slot="start">
-        <a href="javascript:history.back()" class="back_btn"><ion-icon name="arrow-back-outline"></ion-icon></a>
-      </ion-buttons>
-      View Media
-    </ion-title>
+<ion-header class="ion-no-border">
+  <ion-toolbar class="top_header_navbar">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title  class="navbar_title">View Media</ion-title>
   </ion-toolbar>
 </ion-header>
+
 
 <ion-content>
 <div>
@@ -61,7 +60,7 @@
 
 <!-- Full image modal -->
 
-<div class="image_modal" *ngIf="showImageModal" (click)="onShowImageModal()">
+<div class="image_modal" *ngIf="showImageModal">
   <div class="container">
     <img [src]="currentImgSrc" alt="">
   </div>

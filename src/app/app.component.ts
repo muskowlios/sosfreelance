@@ -88,13 +88,17 @@ export class AppComponent {
     });
   }
   logOut(){
+    this.menu.close() ;
     this.router.navigate(['/login']);
   }
-  goToProfile(){
-    this.router.navigate(['/user-profile']);
-  }
+
 
   closeMenu() {
     this.menu.close() ;
+  }
+  userProfile(){
+    this.menu.close() ;
+    this.router.navigate(['/user-profile']);
+
   }
 }

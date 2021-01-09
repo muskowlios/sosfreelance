@@ -5,11 +5,11 @@
         <div class="side_bar_profile_header">
           <div>
             <div class="user_card">
-              <div class="avtar_img">
-                <img src="../assets/icons/macclary.jpg" alt="">
+              <div class="avtar_img" (click)="userProfile()" >
+                <img src="assets/icons/macclary.jpg" alt="">
               </div>
               <div class="user_info">
-                <div class="info_details">
+                <div class="info_details" (click)="userProfile()"  >
                   <div class="name">CLaudia</div>
                   <div class="city">Newyork</div>
                   <div class="name">21.3 K</div>
@@ -20,21 +20,23 @@
                   </ion-buttons>
                 </div>
               </div>
-            </div>
-            <div class="screnn_title">
-              <h1>Profile</h1>
-            </div>
+            </div>         
           </div>
         </div>
         <div class="menu">
-          <ul>
-            <!-- <ng-container *ngFor="let menu_item of appPages; let i = index">
-            <li [routerLink]="[menu_item.url]" routerLinkActive="active" dex(click)="selectedIn = i" routerDirection="root" lines="none" detail="false" [class.selected]="selectedIndex == i">{{menu_item?.title}}</li>
-          </ng-container> -->
+          <ul>          
             <ng-container *ngFor="let menu_item of appPages; let i = index">
               <li [routerLink]="[menu_item.url]" routerLinkActive="active" (click)="closeMenu()">{{menu_item?.title}}</li>
             </ng-container>
-            <li (click)="logOut()">LogOut</li>
+            <ng-container>
+              <li (click)="logOut()">LogOut</li>
+            </ng-container>
+
+            <!-- <ion-menu-toggle auto-hide="false">
+              <ion-item (click)="logOut()" lines="none" class="ion-text-center" color="primary">              
+                <ion-label>Log Out</ion-label>
+              </ion-item>
+            </ion-menu-toggle> -->
           </ul>
         </div>
       </ion-content>

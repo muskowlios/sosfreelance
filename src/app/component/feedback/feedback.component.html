@@ -4,13 +4,15 @@
   <div class="content">
     <h5>GIVE YOUR<h6>FEEDBACK!</h6></h5>
     <ion-label>Choose below Emojis to rate us.</ion-label>
-    <ion-icon color="secondary" name="checkmark-done-circle-outline"></ion-icon> 
+    <div scrollX="true">  
+    <ion-icon color="secondary" name="checkmark-done-circle-outline" class="scrollX"></ion-icon> 
+    </div>
     <ion-item>
       <ion-textarea placeholder="Text..." clearOnEdit="true"></ion-textarea>
     </ion-item>
   </div>
   <div>
-    <button class="button" (click)="submit()" class="btn btn-primary">Submit</button>
+    <ion-button class="button" (click)="submit()" expand="block" >Submit</ion-button>
   </div>
 </div>
 

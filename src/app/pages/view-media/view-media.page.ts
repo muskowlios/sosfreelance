@@ -42,7 +42,7 @@ export class ViewMediaPage implements OnInit {
   ngOnInit() {
   }
 
-  onShowImageModal(src?){
+  onShowImageModal(src){
     this.showImageModal=!this.showImageModal;
     this.currentImgSrc = src;
   }
